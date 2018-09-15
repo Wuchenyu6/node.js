@@ -1,0 +1,26 @@
+﻿1.node.js是一个基于Chrome V8引擎的JavaScript运行环境
+  node.js使用了一个事件驱动、非阻塞式I/O的模型，使其轻量又高效
+  node.js的包管理器npm是全球最大的开源库生态系统
+2.第一课 任务5
+  （1）创建 nodejs-demo 目录
+       mkdir 文件名  （创建目录）
+  （2）cd 文件名     （进入）
+  （3）把 .tern-project 代码自动补全配置文件，放到 nodejs-demo 目录下，操作方法如下：
+       运行 wget http://sample.wangding.in/nodejs/tern-project
+       运行 mv tern-project .tern-project
+  （4）创建 01-introduction 目录
+       mkdir 文件名1
+  （5）编写 01-hello-world.js
+  （6）在命令行打印 hello world! 字符
+   
+3.第一课 任务6
+  （1）编写 02-hello-world-server.js
+  （2）监听端口：8080  当收到 HTTP 请求时，发送响应文本 hello world!
+	#!/usr/bin/node
+        const http=require('http');
+	http.createserver((req,res)=>{res.end('hello world!')}).listen(8080);
+	./02-hello-world-server.js
+  （3）用浏览器测试 web 程序:
+	在谷歌浏览器中输入虚拟机地址 
+  （4）用 curl linux 命令行程序测试 web 程序：
+	新建一个控制台 输入curl http://localhost:8080
